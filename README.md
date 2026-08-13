@@ -2,7 +2,7 @@
 
 Landing page de portfólio para uma barbearia fictícia de estilo vintage/clássico, desenvolvida com HTML, CSS e JavaScript puros (sem frameworks).
 
-🔗 **Site no ar:** _[adicionar link da Netlify aqui após o deploy]_
+🔗 **Site no ar:** [corte-e-navalha.netlify.app](https://corte-e-navalha.netlify.app/)
 
 ## Sobre o projeto
 
@@ -18,13 +18,12 @@ Projeto criado como peça de portfólio para atuação como desenvolvedor front-
 
 - Menu fixo (sticky) com destaque automático da seção ativa ao rolar a página 
 - Seções: Hero, Sobre, Serviços, Galeria, Depoimentos, Contato
-- Formulário de depoimentos integrado ao **Netlify Forms**, com proteção anti-spam (honeypot)
+- Formulário de depoimentos integrado ao **Netlify Forms**, com proteção anti-spam (honeypot) e envio via `fetch` sem recarregar a página
 - Layout responsivo (mobile, tablet, desktop)
-- Fundo do Hero com efeito de vinheta + textura de grão em CSS puro (SVG embutido, sem imagens externas)
 
 ## Tecnologias
 
-- HTML5 semântico
+- HTML5 
 - CSS3 
 - JavaScript 
 - [Netlify](https://netlify.com) para hospedagem e formulários
