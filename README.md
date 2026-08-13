@@ -16,17 +16,17 @@ Projeto criado como peça de portfólio para atuação como desenvolvedor front-
 
 ## Funcionalidades
 
-- Menu fixo (sticky) com destaque automático da seção ativa ao rolar a página (via `IntersectionObserver`)
+- Menu fixo (sticky) com destaque automático da seção ativa ao rolar a página 
 - Seções: Hero, Sobre, Serviços, Galeria, Depoimentos, Contato
-- Formulário de depoimentos integrado ao **Netlify Forms**, com proteção anti-spam (honeypot) e envio via `fetch` sem recarregar a página
+- Formulário de depoimentos integrado ao **Netlify Forms**, com proteção anti-spam (honeypot)
 - Layout responsivo (mobile, tablet, desktop)
 - Fundo do Hero com efeito de vinheta + textura de grão em CSS puro (SVG embutido, sem imagens externas)
 
 ## Tecnologias
 
 - HTML5 semântico
-- CSS3 (Grid, Flexbox, variáveis CSS, `backdrop-filter`)
-- JavaScript vanilla (ES6+)
+- CSS3 
+- JavaScript 
 - [Netlify](https://netlify.com) para hospedagem e formulários
 - Fontes via Google Fonts (Bebas Neue, Source Serif 4)
 
@@ -39,19 +39,6 @@ barbearia-landing/
 ├── script.js
 └── README.md
 ```
-
-## Como rodar localmente
-
-Não é necessário nenhuma instalação. Basta clonar o repositório e abrir o `index.html` no navegador:
-
-```bash
-git clone https://github.com/SEU-USUARIO/barbearia-corte-e-navalha.git
-cd barbearia-corte-e-navalha
-```
-
-Depois é só abrir o arquivo `index.html` diretamente no navegador (ou usar a extensão "Live Server" no VS Code para recarregamento automático).
-
-> **Nota:** o formulário de depoimentos usa o Netlify Forms e só funciona quando o site está publicado na Netlify — localmente, o envio não será processado.
 
 ## Autor
 
