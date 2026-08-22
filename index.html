@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corte & Navalha — Barbearia</title>
+
+    <!-- ===== SEO / META TAGS ===== -->
+    <meta name="description" content="Corte & Navalha — barbearia tradicional desde 1998 no Centro. Corte clássico, barba na navalha e ambiente vintage. Agende pelo WhatsApp.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph: como o link aparece quando compartilhado no WhatsApp/Instagram -->
+    <meta property="og:title" content="Corte & Navalha — Barbearia">
+    <meta property="og:description" content="Tradição em cada corte desde 1998. Navalha afiada, técnica clássica e atendimento de família. Agende seu horário.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1758812818698-6ecd792a87da?fm=jpg&q=70&w=1200&auto=format&fit=crop">
+
+    <!-- Dados estruturados: ajuda o Google a entender que somos uma barbearia local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Corte & Navalha",
+      "image": "https://images.unsplash.com/photo-1758812818698-6ecd792a87da?fm=jpg&q=70&w=1200&auto=format&fit=crop",
+      "telephone": "+55 00 00000-0000",
+      "priceRange": "R$15 - R$70",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua das Tesouras, 120",
+        "addressLocality": "Centro",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
@@ -19,7 +57,8 @@
                 <a href="#sobre">Sobre</a>
                 <a href="#servicos">Serviços</a>
                 <a href="#galeria">Galeria</a>
-                <a href="#depoimentos">Clientes</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#faq">Dúvidas</a>
                 <a href="#contato">Contato</a>
             </nav>
             <a href="#contato" class="nav__cta">Agendar</a>
@@ -41,12 +80,23 @@
     <!-- ===== SOBRE ===== -->
     <section id="sobre" class="sobre">
         <div class="sobre__inner">
-            <h2 class="section-title">Nossa história</h2>
-            <p class="sobre__texto">
-                A Corte & Navalha nasceu do amor pelo ofício clássico de barbeiro. Aqui, cada corte é feito
-                com calma, técnica apurada na navalha e respeito pela tradição — sem abrir mão do estilo que
-                o cliente de hoje procura. Um ambiente descontraído, música boa e o cafezinho sempre quente.
-            </p>
+            <div class="sobre__coluna-texto">
+                <h2 class="section-title section-title--esquerda">Nossa história</h2>
+                <p class="sobre__texto">
+                    A Corte & Navalha nasceu do amor pelo ofício clássico de barbeiro. Aqui, cada corte é feito
+                    com calma, técnica apurada na navalha e respeito pela tradição — sem abrir mão do estilo que
+                    o cliente de hoje procura. Um ambiente descontraído, música boa e o cafezinho sempre quente.
+                </p>
+                <p class="sobre__texto">
+                    Aqui, cada atendimento é tratado como um ritual único e personalizado. Trabalhamos com calma, 
+                    aplicando técnicas minuciosas na navalha e na tesoura, resgatando a essência dos antigos barbeiros. 
+                    Esse respeito ao passado caminha lado a lado com a inovação, garantindo o estilo moderno, os cortes 
+                    precisos e as tendências que o homem contemporâneo procura para expressar sua identidade.
+                </p>
+            </div>
+            <div class="sobre__coluna-foto">
+                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Cliente com corte finalizado na Corte & Navalha" loading="lazy">
+            </div>
         </div>
     </section>
 
@@ -57,37 +107,50 @@
             <div class="servico-card">
                 <h3>Corte Clássico</h3>
                 <p>Tesoura e máquina, acabamento na navalha</p>
+                <span class="servico-card__duracao">🕐 40 min</span>
                 <span class="preco">R$ 45</span>
             </div>
             <div class="servico-card">
                 <h3>Barba Completa</h3>
                 <p>Toalha quente, navalha e óleo finalizador</p>
+                <span class="servico-card__duracao">🕐 30 min</span>
                 <span class="preco">R$ 35</span>
             </div>
-            <div class="servico-card">
+            <div class="servico-card servico-card--destaque">
+                <span class="servico-card__badge">Mais pedido</span>
                 <h3>Corte + Barba</h3>
-                <p>O combo completo, do cabelo à barba<p>
+                <p>O combo completo, do cabelo à barba</p>
+                <span class="servico-card__duracao">🕐 55 min</span>
                 <span class="preco">R$ 70</span>
             </div>
             <div class="servico-card">
                 <h3>Sobrancelha</h3>
                 <p>Alinhamento na navalha, rápido e preciso</p>
+                <span class="servico-card__duracao">🕐 10 min</span>
                 <span class="preco">R$ 15</span>
             </div>
              <div class="servico-card">
                 <h3>Alisamento</h3>
-                <p> Redução de volume e alinhamento dos fios</p>
+                <p>Redução de volume e alinhamento dos fios</p>
+                <span class="servico-card__duracao">🕐 90 min</span>
                 <span class="preco">R$ 65</span>
+            </div>
+            <div class="servico-card">
+                <h3>Corte Infantil</h3>
+                <p>Paciência e cuidado extra para os pequenos</p>
+                <span class="servico-card__duracao">🕐 30 min</span>
+                <span class="preco">R$ 35</span>
             </div>
         </div>
     </section>
 
     <div class="divider" aria-hidden="true"></div>
 
- 
     <!-- ===== GALERIA ===== -->
     <section id="galeria" class="galeria">
         <h2 class="section-title">Ambiente & trabalho</h2>
+
+        <h3 class="galeria__subtitulo">Ambiente</h3>
         <div class="galeria__grid">
             <div class="galeria__item">
                 <img src="https://images.unsplash.com/photo-1758812818698-6ecd792a87da?fm=jpg&q=70&w=700&auto=format&fit=crop" alt="Interior vintage de barbearia com poltronas" loading="lazy">
@@ -102,78 +165,153 @@
                 <img src="https://images.unsplash.com/photo-1614438865362-9137f7e3036e?fm=jpg&q=70&w=700&auto=format&fit=crop" alt="Cadeira de barbeiro preta e prateada" loading="lazy">
             </div>
         </div>
-    </section>
 
-
-    <!-- ===== DEPOIMENTOS ===== -->
-    <section id="depoimentos" class="depoimentos">
-        <h2 class="section-title">Quem já passou por aqui</h2>
-        <div class="depoimentos__grid">
-            <blockquote class="depoimento">
-                <p>"Melhor acabamento de navalha que já fiz na cidade. Virei cliente fixo."</p>
-                <cite>— Rafael M.</cite>
-            </blockquote>
-            <blockquote class="depoimento">
-                <p>"Ambiente ótimo, atendimento no horário e o cafezinho é um mimo à parte."</p>
-                <cite>— Diego S.</cite>
-            </blockquote>
-            <blockquote class="depoimento">
-                <p>"Levo meu filho desde pequeno. Cuidado e paciência que fazem a diferença."</p>
-                <cite>— Anderson P.</cite>
-            </blockquote>
+        <h3 class="galeria__subtitulo galeria__subtitulo--cortes">Cortes Realizados</h3>
+        <div class="galeria__grid galeria__grid--cortes">
+            <div class="galeria__item galeria__item--comparar">
+                <img class="galeria__antes" src="https://images.unsplash.com/photo-1634480257305-7f4ca3582e6a?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Antes do corte" loading="lazy">
+                <img class="galeria__depois" src="https://images.unsplash.com/photo-1649433658557-54cf58577c68?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Depois do corte" loading="lazy">
+                <span class="galeria__tag">Antes / Depois</span>
+            </div>
+            <div class="galeria__item galeria__item--comparar">
+                <img class="galeria__antes" src="https://images.unsplash.com/photo-1494873446894-adbfecfc407a?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Antes da barba" loading="lazy">
+                <img class="galeria__depois" src="https://images.unsplash.com/photo-1642795730901-84f82e088e17?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Depois da barba" loading="lazy">
+                <span class="galeria__tag">Antes / Depois</span>
+            </div>
+            <div class="galeria__item galeria__item--comparar">
+                <img class="galeria__antes" src="https://images.unsplash.com/photo-1672642150228-3fcd5826ec26?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Antes do degradê" loading="lazy">
+                <img class="galeria__depois" src="https://images.unsplash.com/photo-1649433658557-54cf58577c68?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Depois do degradê" loading="lazy">
+                <span class="galeria__tag">Antes / Depois</span>
+            </div>
+            <div class="galeria__item galeria__item--comparar">
+                <img class="galeria__antes" src="https://images.unsplash.com/photo-1494873446894-adbfecfc407a?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Antes do combo corte e barba" loading="lazy">
+                <img class="galeria__depois" src="https://images.unsplash.com/photo-1642795730901-84f82e088e17?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Depois do combo corte e barba" loading="lazy">
+                <span class="galeria__tag">Antes / Depois</span>
+            </div>
         </div>
+        <p class="galeria__nota">* Fotos de antes/depois são ilustrativas — troque pelas fotos reais dos seus clientes assim que tiver.</p>
     </section>
 
     <div class="divider" aria-hidden="true"></div>
 
-     <!-- ===== FORMULÁRIO DE DEPOIMENTO (Netlify Forms) ===== -->
-        <div class="depoimento-form__wrapper">
-            <h3 class="depoimento-form__titulo">Já foi cliente? Deixe seu depoimento</h3>
-            <form
-                name="depoimentos"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                class="depoimento-form"
-                id="form-depoimento"
-            >
-                <input type="hidden" name="form-name" value="depoimentos">
-                <p class="hidden-field">
-                    <label>Não preencha este campo: <input name="bot-field"></label>
-                </p>
- 
-                <div class="campo">
-                    <label for="nome">Seu nome</label>
-                    <input type="text" id="nome" name="nome" required maxlength="60">
+    <!-- ===== PRODUTOS ===== -->
+    <section id="produtos" class="produtos">
+        <h2 class="section-title">Produtos à venda</h2>
+        <p class="produtos__intro">Leve pra casa os produtos que usamos aqui na barbearia.</p>
+        <div class="produtos__grid">
+            <div class="produto-card">
+                <div class="produto-card__foto">
+                    <img src="https://images.unsplash.com/photo-1758544518111-53274094598e?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Pomada modeladora para cabelo" loading="lazy">
                 </div>
- 
-                <div class="campo">
-                    <label for="mensagem">Seu depoimento</label>
-                    <textarea id="mensagem" name="mensagem" rows="3" required maxlength="300"></textarea>
+                <h3>Pomada Modeladora</h3>
+                <p>Fixação forte, efeito matte</p>
+                <span class="preco">R$ 38</span>
+            </div>
+            <div class="produto-card">
+                <div class="produto-card__foto">
+                    <img src="https://images.unsplash.com/photo-1696497327641-ff0de1bc41c4?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Óleo para barba" loading="lazy">
                 </div>
- 
-                <button type="submit" class="btn btn--primary">Enviar depoimento</button>
-                <p></p>
-                <p class="depoimento-form__aviso">Seu depoimento passa por uma breve revisão antes de aparecer no site.</p>
-            </form>
+                <h3>Óleo para Barba</h3>
+                <p>Hidrata e dá brilho, sem oleosidade</p>
+                <span class="preco">R$ 32</span>
+            </div>
+            <div class="produto-card">
+                <div class="produto-card__foto">
+                    <img src="https://images.unsplash.com/photo-1697201358649-ca8e6ecc3ac0?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Balm para barba" loading="lazy">
+                </div>
+                <h3>Balm Pós-Barba</h3>
+                <p>Acalma a pele e fecha os poros</p>
+                <span class="preco">R$ 29</span>
+            </div>
+            <div class="produto-card">
+                <div class="produto-card__foto">
+                    <img src="https://images.unsplash.com/photo-1694101395787-516200bb2515?fm=jpg&q=70&w=500&auto=format&fit=crop" alt="Shampoo e condicionador masculino" loading="lazy">
+                </div>
+                <h3>Shampoo Masculino</h3>
+                <p>Limpeza profunda para o dia a dia</p>
+                <span class="preco">R$ 27</span>
+            </div>
+        </div>
+        <p class="produtos__nota">* Fotos ilustrativas — troque pelas fotos reais das marcas que você trabalha assim que tiver.</p>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <div class="faq__lista">
+            <details class="faq__item">
+                <summary>Preciso agendar horário?</summary>
+                <p>Recomendamos agendar pelo WhatsApp pra garantir seu horário certinho, mas também atendemos por ordem de chegada quando há vaga na agenda.</p>
+            </details>
+            <details class="faq__item">
+                <summary>Vocês aceitam cartão?</summary>
+                <p>Sim! Aceitamos cartão de débito, crédito, Pix e dinheiro.</p>
+            </details>
+            <details class="faq__item">
+                <summary>Tem estacionamento por perto?</summary>
+                <p>Temos vagas na rua em frente à barbearia e um estacionamento pago a cerca de 50 metros.</p>
+            </details>
+            <details class="faq__item">
+                <summary>Atendem crianças?</summary>
+                <p>Sim, atendemos clientes de todas as idades com todo o cuidado.</p>
+            </details>
         </div>
     </section>
- 
+
     <div class="divider" aria-hidden="true"></div>
- 
 
     <!-- ===== CONTATO / RODAPÉ ===== -->
     <footer id="contato" class="contato">
         <div class="contato__inner">
-            <div class="contato__bloco">
-                <h2 class="section-title section-title--light">Vamos marcar seu horário?</h2>
-                <p>Rua das Tesouras, 120 — Centro</p>
-                <p>Ter a Sáb · 9h às 19h</p>
-                <a href="https://wa.me/5500000000000" class="btn btn--whatsapp" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <h2 class="section-title section-title--light">Vamos marcar seu horário?</h2>
+
+            <div class="contato__grid">
+                <div class="contato__bloco">
+                    <p class="contato__endereco">📍 Rua das Tesouras, 120 — Centro</p>
+
+                    <div class="horario">
+                        <p class="horario__status" id="status-aberto">Verificando horário...</p>
+                        <ul class="horario__lista">
+                            <li><span>Segunda</span><span>Fechado</span></li>
+                            <li><span>Terça a Sábado</span><span>9h às 19h</span></li>
+                            <li><span>Domingo</span><span>Fechado</span></li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/5500000000000" class="btn btn--whatsapp" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+
+                    <div class="redes-sociais">
+                        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+                        </a>
+                        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 4h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contato__mapa">
+                    <iframe
+                        title="Localização Corte & Navalha no mapa"
+                        src="https://www.google.com/maps?q=Rua+das+Tesouras+120+Centro&output=embed"
+                        width="100%" height="280" style="border:0"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
         <p class="contato__copy">© 2026 Corte & Navalha Barbearia. Projeto de portfólio.</p>
     </footer>
+
+    <!-- ===== BOTÃO FLUTUANTE WHATSAPP ===== -->
+    <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </a>
 
     <script src="script.js"></script>
 </body>

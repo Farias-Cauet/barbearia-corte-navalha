@@ -17,31 +17,22 @@ const observador = new IntersectionObserver((entradas) => {
 
 secoes.forEach((secao) => observador.observe(secao));
 
-// Envia o formulário de depoimento via fetch (evita recarregar a página)
-// e mostra uma mensagem de agradecimento no lugar do form.
-const formDepoimento = document.getElementById('form-depoimento');
+// Mostra se a barbearia está aberta agora, com base no horário: Ter a Sáb, 9h às 19h
+function atualizarStatusAberto() {
+    const elemento = document.getElementById('status-aberto');
+    if (!elemento) return;
 
-if (formDepoimento) {
-    formDepoimento.addEventListener('submit', (evento) => {
-        evento.preventDefault();
+    const agora = new Date();
+    const dia = agora.getDay(); // 0 = domingo ... 6 = sábado
+    const horaDecimal = agora.getHours() + agora.getMinutes() / 60;
 
-        const dados = new FormData(formDepoimento);
+    const dentroDoDia = dia >= 2 && dia <= 6; // terça (2) a sábado (6)
+    const dentroDoHorario = horaDecimal >= 9 && horaDecimal < 19;
+    const aberto = dentroDoDia && dentroDoHorario;
 
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(dados).toString(),
-        })
-            .then(() => {
-                formDepoimento.style.display = 'none';
-
-                const feedback = document.createElement('p');
-                feedback.className = 'depoimento-form__feedback depoimento-form__feedback--visivel';
-                feedback.textContent = 'Obrigado! Seu depoimento foi enviado e será revisado em breve.';
-                formDepoimento.parentElement.appendChild(feedback);
-            })
-            .catch(() => {
-                alert('Não foi possível enviar agora. Tente novamente em instantes.');
-            });
-    });
+    elemento.textContent = aberto ? '● Aberto agora' : '● Fechado no momento';
+    elemento.classList.toggle('status--aberto', aberto);
+    elemento.classList.toggle('status--fechado', !aberto);
 }
+
+atualizarStatusAberto();
